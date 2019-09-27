@@ -1,0 +1,12 @@
+table,tr,td{
+    border:1px solid black;
+    border-radius: 4px;
+
+}
+
+td{
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    font-size: 40px;
+}
