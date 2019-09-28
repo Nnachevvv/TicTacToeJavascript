@@ -1,33 +1,55 @@
 
-
-
-let player = {
-    symbol:"O",
-    score : 0,
-    turn : true,
-    playMove(e)
+let player = [{
+    symbol: "O",
+    score: 0,
+    turn: true,
+    },
     {
+        symbol:"X",
+        turn:false,
+        score:0,
+    }
+    ];
+
+function clickTrigger(e)
+{
         let x = document.getElementById(e.id);
         document.getElementById(e.id).style.pointerEvents = 'none';
-        x.innerHTML = this.symbol;
-        if(checkForWin(e.parentNode.rowIndex,e.cellIndex,this.symbol))
+        if(player[0].turn == true)
         {
-                deleteValuesInTable();
-                initMatrix();
-        };
-        if(checkDraw())
-        {
+            playTurn( x, e, player[0], player[1]);
+        }
+        else{
+            playTurn( x, e, player[1], player[0]);
+        }
+
+}
+
+
+function playTurn(x, e, currentPlayer, secondPlayer) {
+    x.innerHTML = currentPlayer.symbol;
+    currentPlayer.turn = false;
+    secondPlayer.turn = true;
+     if(checkForWin(e.parentNode.rowIndex,e.cellIndex,currentPlayer.symbol))
+     {
             deleteValuesInTable();
             initMatrix();
-        }
-        if(this.symbol === "O") {
-            this.symbol = "X"
-        }
-        else {
-            this.symbol = "O";
-        }
-    }
-};
+            ++currentPlayer.score;
+            writeScoreInHtml();
+     }
+     else if(checkDraw())
+     {
+            deleteValuesInTable();
+            initMatrix();
+     }
+}
+
+
+function writeScoreInHtml() {
+    document.getElementById("firstPlayerScore").innerHTML = player[0].score;
+    document.getElementById("secondPlayerScore").innerHTML = player[1].score;
+
+}
 
 
 function deleteValuesInTable() {
@@ -44,9 +66,7 @@ function deleteValuesInTable() {
 }
 
 
-
 const ROWS_COLS_LENGTH = 3;
-
 
 
  function  checkForWin(xPos, yPos, symbol)
@@ -103,6 +123,7 @@ function checkAntiDiagonal(symbol)
     return true;
 }
 
+
 function checkDraw()
 {
     for(let i = 0; i <ROWS_COLS_LENGTH; i++)
@@ -117,11 +138,15 @@ function checkDraw()
     return true;
 }
 
+
 let matrix = [];
 initMatrix();
+
 function  initMatrix() {
     for (let i = 0; i < ROWS_COLS_LENGTH; i++) {
         matrix[i] = new Array(ROWS_COLS_LENGTH);
 
     }
 }
+
+
