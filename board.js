@@ -11,7 +11,7 @@ const ROWS_COLS_LENGTH = 3;
 function checkCol(xPos,yPos,symbol)
 {
     for (let i = 0; i < ROWS_COLS_LENGTH; i++) {
-        if(matrix[i][yPos] != symbol)
+        if(matrix[i][yPos] !== symbol)
         {
             return false;
         }
@@ -23,7 +23,7 @@ function checkCol(xPos,yPos,symbol)
 function checkRow (xPos,yPos,symbol)
 {
     for (let i = 0; i < ROWS_COLS_LENGTH; i++) {
-        if(matrix[xPos][i] != symbol)
+        if(matrix[xPos][i] !== symbol)
         {
             return false;
         }
@@ -35,7 +35,7 @@ function checkRow (xPos,yPos,symbol)
 function checkDiagonal(symbol)
 {
     for (let i = 0; i < ROWS_COLS_LENGTH; i++) {
-        if(matrix[i][i] != symbol)
+        if(matrix[i][i] !== symbol)
         {
             return false;
         }
@@ -47,7 +47,7 @@ function checkDiagonal(symbol)
 function checkAntiDiagonal(symbol)
 {
     for (let i = 0; i < ROWS_COLS_LENGTH; i++) {
-        if(matrix[i][ROWS_COLS_LENGTH-i-1] != symbol)
+        if(matrix[i][ROWS_COLS_LENGTH-i-1] !== symbol)
         {
             return false;
         }
@@ -80,3 +80,4 @@ function  initMatrix() {
 
     }
 }
+

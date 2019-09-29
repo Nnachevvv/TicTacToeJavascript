@@ -6,6 +6,7 @@
       <change beforePath="$PROJECT_DIR$/board.js" beforeDir="false" afterPath="$PROJECT_DIR$/board.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/player.js" beforeDir="false" afterPath="$PROJECT_DIR$/player.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -80,7 +81,8 @@
       <workItem from="1569590387292" duration="3516000" />
       <workItem from="1569604152933" duration="2066000" />
       <workItem from="1569663803982" duration="661000" />
-      <workItem from="1569691571254" duration="5531000" />
+      <workItem from="1569691571254" duration="6388000" />
+      <workItem from="1569759440414" duration="5808000" />
     </task>
     <servers />
   </component>
@@ -101,6 +103,6 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/TIcTacToe$index_html.dat" NAME="index.html Coverage Results" MODIFIED="1569592066991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/TIcTacToe$index_html.dat" NAME="index.html Coverage Results" MODIFIED="1569764012962" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

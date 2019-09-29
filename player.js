@@ -10,11 +10,25 @@ let player = [{
     }
     ];
 
+
+let computer = {
+    symbol: "X",
+    score : 0,
+    isTriggered : false,
+};
+
+
 function clickTrigger(e)
 {
         let x = document.getElementById(e.id);
         document.getElementById(e.id).style.pointerEvents = 'none';
-        if(player[0].turn == true)
+        if(computer.isTriggered)
+        {
+                x.innerHTML = player[0].symbol;
+                checkForEnd(e.parentNode.rowIndex,e.cellIndex,player[0]);
+                computerPlay();
+        }
+        else if(player[0].turn)
         {
             playTurn( x, e, player[0], player[1]);
         }
@@ -25,15 +39,38 @@ function clickTrigger(e)
 }
 
 
+function computerPlay()
+{
+    let row = Math.floor(Math.random() * ROWS_COLS_LENGTH);
+    let col = Math.floor(Math.random() * ROWS_COLS_LENGTH);
+    while(matrix[row][col])
+    {
+        row = Math.floor(Math.random() * ROWS_COLS_LENGTH);
+        col = Math.floor(Math.random() * ROWS_COLS_LENGTH);
+    }
+    document.getElementById("table").rows[row].cells[col].innerHTML = computer.symbol;
+    document.getElementById("table").rows[row].cells[col].style.pointerEvents = "none";
+    checkForEnd(row,col,computer);
+
+}
+
+
 function playTurn(x, e, currentPlayer, secondPlayer) {
     x.innerHTML = currentPlayer.symbol;
     currentPlayer.turn = false;
     secondPlayer.turn = true;
-     if(checkForWin(e.parentNode.rowIndex,e.cellIndex,currentPlayer.symbol))
+    checkForEnd(e.parentNode.rowIndex,e.cellIndex,currentPlayer);
+}
+
+
+
+function checkForEnd(rowIndex,cellIndex,player) {
+
+     if(checkForWin(rowIndex, cellIndex, player.symbol))
      {
             deleteValuesInTable();
             initMatrix();
-            ++currentPlayer.score;
+            ++player.score;
             writeScoreInHtml();
      }
      else if(checkDraw())
@@ -46,8 +83,11 @@ function playTurn(x, e, currentPlayer, secondPlayer) {
 
 function writeScoreInHtml() {
     document.getElementById("firstPlayerScore").innerHTML = player[0].score;
-    document.getElementById("secondPlayerScore").innerHTML = player[1].score;
-
+    if (!computer.isTriggered) {
+        document.getElementById("secondPlayerScore").innerHTML = player[1].score;
+    }else{
+        document.getElementById("secondPlayerScore").innerHTML = computer.score;
+    }
 }
 
 
@@ -65,6 +105,17 @@ function deleteValuesInTable() {
 }
 
 
-
-
+function changePlayer(e) {
+    if(e.id === "computer" && computer.isTriggered === false)
+    {
+        deleteValuesInTable();
+        player[1].score = 0;
+        computer.isTriggered = true;
+    }else if(e.id === "player" && computer.isTriggered === true)
+    {
+        computer.score = 0;
+        deleteValuesInTable();
+        computer.isTriggered = false;
+    }
+}
 

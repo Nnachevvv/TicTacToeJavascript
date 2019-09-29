@@ -10,3 +10,9 @@ td{
     text-align: center;
     font-size: 40px;
 }
+
+.container{
+    max-width: 250px;
+    margin: auto;
+}
+
