@@ -22,6 +22,7 @@ function clickTrigger(e)
 {
         let x = document.getElementById(e.id);
         document.getElementById(e.id).style.pointerEvents = 'none';
+
         if(computer.isTriggered)
         {
                 x.innerHTML = player[0].symbol;
@@ -64,19 +65,18 @@ function playTurn(x, e, currentPlayer, secondPlayer) {
 
 
 
-function checkForEnd(rowIndex,cellIndex,player) {
+function checkForEnd(rowIndex,cellIndex,currentPlayer) {
 
-     if(checkForWin(rowIndex, cellIndex, player.symbol))
+     if(checkForWin(rowIndex, cellIndex, currentPlayer.symbol))
      {
             deleteValuesInTable();
-            initMatrix();
-            ++player.score;
+            ++currentPlayer.score;
             writeScoreInHtml();
      }
      else if(checkDraw())
      {
             deleteValuesInTable();
-            initMatrix();
+
      }
 }
 
@@ -97,32 +97,35 @@ function deleteValuesInTable() {
     for (let i = 0; i < ROWS_COLS_LENGTH; i++) {
 
         for (let j = 0; j < ROWS_COLS_LENGTH; j++) {
+
             table.rows[i].cells[j].innerHTML = null;
             let id = table.rows[i].cells[j].id;
             document.getElementById(id).style.pointerEvents = 'auto';
+
         }
     }
+    initMatrix();
 }
 
 
 function changePlayer(e) {
+
     if(e.id === "computer")
     {
-        e.style.display = "none";
         let x  = document.getElementById("player").style.display = "inline-block";
-        deleteValuesInTable();
         computer.isTriggered = false;
     }else if(e.id === "player")
     {
-        e.style.display = "none";
         let x  = document.getElementById("computer").style.display = "inline-block";
-        deleteValuesInTable();
         computer.isTriggered = true;
     }
+
+    e.style.display = "none";
     player[0].score = 0;
     player[1].score = 0;
     computer.score = 0;
     writeScoreInHtml();
+    deleteValuesInTable();
 
 }
 

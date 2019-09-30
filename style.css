@@ -16,10 +16,10 @@ table,tr,td,span,p,img{
 }
 
 td{
-    width: 60px;
-    height: 60px;
+    width: 200px;
+    height: 200px;
     text-align: center;
-    font-size: 40px;
+    font-size: 160px;
 }
 
 .container{
@@ -30,13 +30,15 @@ td{
 }
 
 section{
-    margin-left: 430px;
+    margin-left: 390px;
+    font-size: 70px;
 }
 
-span,p{
-    margin-left: 12px;
+span{
+    margin-left: 26px;
     margin-right: 4px;
 }
+
 
 
 body{
@@ -44,8 +46,8 @@ body{
 }
 
 img{
-    height: 30px;
-    width: 30px;
+    height: 50px;
+    width: 50px;
 }
 
 #player{
