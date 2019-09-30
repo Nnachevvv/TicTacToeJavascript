@@ -1,7 +1,18 @@
 table,tr,td{
-    border:1px solid black;
+    border: 3px solid black;
     border-radius: 4px;
+    position: relative;
+}
 
+table {
+    border-collapse: collapse;
+    border-style: hidden;
+    margin-bottom: 25px;
+
+}
+
+table,tr,td,span,p,img{
+      margin: 0 auto;
 }
 
 td{
@@ -12,7 +23,31 @@ td{
 }
 
 .container{
-    max-width: 250px;
-    margin: auto;
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: white;
+    position: relative;
 }
 
+section{
+    margin-left: 430px;
+}
+
+span,p{
+    margin-left: 12px;
+    margin-right: 4px;
+}
+
+
+body{
+    background-color: cornflowerblue;
+}
+
+img{
+    height: 30px;
+    width: 30px;
+}
+
+#player{
+    display: none;
+}

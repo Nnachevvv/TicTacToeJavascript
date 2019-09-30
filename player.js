@@ -14,7 +14,7 @@ let player = [{
 let computer = {
     symbol: "X",
     score : 0,
-    isTriggered : false,
+    isTriggered : true,
 };
 
 
@@ -106,16 +106,23 @@ function deleteValuesInTable() {
 
 
 function changePlayer(e) {
-    if(e.id === "computer" && computer.isTriggered === false)
+    if(e.id === "computer")
     {
-        deleteValuesInTable();
-        player[1].score = 0;
-        computer.isTriggered = true;
-    }else if(e.id === "player" && computer.isTriggered === true)
-    {
-        computer.score = 0;
+        e.style.display = "none";
+        let x  = document.getElementById("player").style.display = "inline-block";
         deleteValuesInTable();
         computer.isTriggered = false;
+    }else if(e.id === "player")
+    {
+        e.style.display = "none";
+        let x  = document.getElementById("computer").style.display = "inline-block";
+        deleteValuesInTable();
+        computer.isTriggered = true;
     }
+    player[0].score = 0;
+    player[1].score = 0;
+    computer.score = 0;
+    writeScoreInHtml();
+
 }
 

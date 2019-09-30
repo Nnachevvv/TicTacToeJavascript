@@ -44,6 +44,7 @@ function checkDiagonal(symbol)
 }
 
 
+
 function checkAntiDiagonal(symbol)
 {
     for (let i = 0; i < ROWS_COLS_LENGTH; i++) {
