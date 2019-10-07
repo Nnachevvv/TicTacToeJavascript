@@ -1,6 +1,5 @@
 const ROWS_COLS_LENGTH = 3;
 
-
  function  checkForWin(xPos, yPos, symbol)
 {
 
@@ -71,66 +70,16 @@ function checkDraw()
     return true;
 }
 
-function evaluateRow()
-{
-     for (let row = 0; row<3; row++)
-    {
-        if (matrix[row][0]==matrix[row][1] &&
-            matrix[row][1]==matrix[row][2])
-        {
-            if (matrix[row][0]== "X")
-                return +10;
-            else if (matrix[row][0]=="O")
-                return -10;
-        }
-    }
-     return 0;
-}
-
-function evaluateCol()
-{
-     for (let col = 0; col<3; col++)
-    {
-        if (matrix[0][col]==matrix[1][col] &&
-            matrix[1][col]==matrix[2][col])
-        {
-            if (matrix[0][col]== "X")
-                return +10;
-            else if (matrix[0][col]=="O")
-                return -10;
-        }
-    }
-     return 0;
-}
-
-function evaluateDiagonals()
-{
-        if (matrix[0][0]==matrix[1][1] && matrix[1][1]==matrix[2][2])
-    {
-        if (matrix[0][0]=="X")
-            return +10;
-        else if (matrix[0][0]=="O")
-            return -10;
-    }
-
-    if (matrix[0][2]==matrix[1][1] && matrix[1][1]==matrix[2][0])
-    {
-        if (matrix[0][2]=="X")
-            return +10;
-        else if (matrix[0][2]=="O")
-            return -10;
-    }
-    return 0;
-}
-
 
 let matrix = [];
 initMatrix();
 
+
 function  initMatrix() {
     for (let i = 0; i < ROWS_COLS_LENGTH; i++) {
         matrix[i] = new Array(ROWS_COLS_LENGTH);
-
+        console.log(matrix[0][0]);
     }
 }
+
 

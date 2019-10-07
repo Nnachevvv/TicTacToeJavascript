@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="53e162f1-a7ef-407b-ac8d-bfd3ef7cd046" name="Default Changelist" comment="">
+    <list default="true" id="303a71e8-cbfc-42f8-9ed8-b5198de7e22a" name="Default Changelist" comment="Final commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/board.js" beforeDir="false" afterPath="$PROJECT_DIR$/board.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/player.js" beforeDir="false" afterPath="$PROJECT_DIR$/player.js" afterDir="false" />
@@ -13,34 +13,24 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="518" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="HTML File" />
-        <option value="CSS File" />
-        <option value="JavaScript File" />
-      </list>
-    </option>
+    <option name="myElementSize" value="546" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1RNsCVPE22vzoG4M9eNCO66I3vW" />
+  <component name="ProjectId" id="1Rmld25AZEXJkmPZBFNC89qL7ob" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -54,16 +44,12 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.player.js">
-    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/TIcTacToe/index.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="player.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/player.js" working-dir="$PROJECT_DIR$">
+  <component name="RunManager">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/TicTacToeJavascript/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Node.js.player.js" />
         <item itemvalue="JavaScript Debug.index.html" />
       </list>
     </recent_temporary>
@@ -73,24 +59,20 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="53e162f1-a7ef-407b-ac8d-bfd3ef7cd046" name="Default Changelist" comment="" />
-      <created>1569518760643</created>
+      <changelist id="303a71e8-cbfc-42f8-9ed8-b5198de7e22a" name="Default Changelist" comment="" />
+      <created>1570280236221</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1569518760643</updated>
-      <workItem from="1569518761903" duration="1684000" />
-      <workItem from="1569572068134" duration="8066000" />
-      <workItem from="1569590387292" duration="3516000" />
-      <workItem from="1569604152933" duration="2066000" />
-      <workItem from="1569663803982" duration="661000" />
-      <workItem from="1569691571254" duration="6388000" />
-      <workItem from="1569759440414" duration="8119000" />
-      <workItem from="1569776665042" duration="13000" />
-      <workItem from="1569839997385" duration="11852000" />
-      <workItem from="1569862212527" duration="3571000" />
-      <workItem from="1569875107892" duration="1893000" />
-      <workItem from="1570098337126" duration="119000" />
-      <workItem from="1570193799207" duration="2928000" />
+      <updated>1570280236221</updated>
+      <workItem from="1570280238617" duration="153000" />
+      <workItem from="1570280405229" duration="84000" />
+      <workItem from="1570280490046" duration="8000" />
+      <workItem from="1570292875753" duration="840000" />
+      <workItem from="1570297634844" duration="258000" />
+      <workItem from="1570297908633" duration="3639000" />
+      <workItem from="1570366118939" duration="1088000" />
+      <workItem from="1570369496003" duration="528000" />
+      <workItem from="1570477115133" duration="3342000" />
     </task>
     <servers />
   </component>
@@ -110,7 +92,11 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Final commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final commit" />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/TIcTacToe$index_html.dat" NAME="index.html Coverage Results" MODIFIED="1569764012962" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/TicTacToeJavascript$index_html.dat" NAME="index.html Coverage Results" MODIFIED="1570477648865" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

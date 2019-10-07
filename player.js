@@ -112,11 +112,11 @@ function changePlayer(e) {
 
     if(e.id === "computer")
     {
-        let x  = document.getElementById("player").style.display = "inline-block";
+        document.getElementById("player").style.display = "inline-block";
         computer.isTriggered = false;
     }else if(e.id === "player")
     {
-        let x  = document.getElementById("computer").style.display = "inline-block";
+        document.getElementById("computer").style.display = "inline-block";
         computer.isTriggered = true;
     }
 
@@ -127,126 +127,6 @@ function changePlayer(e) {
     writeScoreInHtml();
     deleteValuesInTable();
 
-}
-
-function evaluate(board) {
-    let x = evaluateRow();
-    if(x !== 0){
-        return x;
-    }
-    x = evaluateCol();
-    if(x !== 0)
-    {
-        return x;
-    }
-    x =evaluateDiagonals();
-        return x;
-}
-
-
-
-function minimax(depth  , isMax) {
-    let score = evaluate(matrix);
-    if(score === 10  ||  score === -10)
-    {
-        return score;
-    }
-
-    if (checkDraw())
-    {
-        return 0;//draw
-    }
-
-    if(isMax)
-    {
-        let best = -10000;
-           for (let i = 0; i<3; i++)
-        {
-            for (let j = 0; j<3; j++)
-            {
-                // Check if cell is empty
-                if (!matrix[i][j])
-                {
-                    // Make the move
-                    matrix[i][j] = "O";
-
-                    // Call minimax recursively and choose
-                    // the maximum value
-                    best = Math.max( best,
-                        minimax(matrix, depth+1, !isMax) );
-
-                    // Undo the move
-                    matrix[i][j] = ' ';
-                }
-            }
-        }
-        return best;
-    }
-    else {
-         let best = 1000;
-
-        // Traverse all cells
-        for (let i = 0; i<3; i++)
-        {
-            for (let j = 0; j<3; j++)
-            {
-                // Check if cell is empty
-                if (!matrix[i][j])
-                {
-                    // Make the move
-                    matrix[i][j] = "X";
-
-                    // Call minimax recursively and choose
-                    // the minimum value
-                    best = Math.max(best,
-                           minimax(matrix, depth+1, !isMax));
-
-                    // Undo the move
-                    matrix[i][j] = ' ';
-                }
-            }
-        }
-        return best;
-    }
-
-}
-
-
-function findBestMove() {
-    let bestVal = -1000;
-    let bestMove;
-    bestMove.row = -1;
-    bestMove.col = -1;
-    for (let i = 0; i<3; i++)
-    {
-        for (let j = 0; j<3; j++)
-        {
-            // Check if cell is empty
-            if (!matrix[i][j])
-            {
-                // Make the move
-                matrix[i][j] = "O";
-
-                // compute evaluation function for this
-                // move.
-                let moveVal = minimax(matrix, 0, false);
-
-                // Undo the move
-                matrix[i][j] = '_';
-
-                // If the value of the current move is
-                // more than the best value, then update
-                // best/
-                if (moveVal > bestVal)
-                {
-                    bestMove.row = i;
-                    bestMove.col = j;
-                    bestVal = moveVal;
-                }
-            }
-        }
-    }//to do
-    return bestMove;
 }
 
 
